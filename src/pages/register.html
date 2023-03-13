@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+    <link rel="stylesheet" href="/src/styles/globalStyles.css">
+    <link rel="stylesheet" href="/src/styles/register.css">
+
+    <title>Cadastro de Usuário</title>
+</head>
+
+<body>
+    <section>
+        <img src="/assets/Group 42.svg" alt="Logo Kenzie Empresas">
+        <nav>
+            <button id="home" class="btn1">Home</button>
+            <button id="login" class="btn2">Login</button>
+        </nav>
+    </section>
+
+    <main>
+        <div class="register-user">
+            <h2>Cadastre-se</h2>
+
+            <form action="">
+                <input type="text" placeholder="Seu nome" id="name">
+                <input type="email" placeholder="Seu email" id="email">
+                <input type="password" placeholder="Sua senha" id="password">
+                <select name="nivel" id="nivel-pr">
+                    <option value="null" disabled selected>Nível profissional</option>
+                    <option value="sênior">Sênior</option>
+                    <option value="pleno">Pleno</option>
+                    <option value="júnior">Júnior</option>
+                </select>
+                <button id="registered">Cadastre-se</button>
+            </form>
+
+            <button id="index" class="goHome">Retornar</button>
+        </div>
+    </main>
+
+    <script src="/src/scripts/register.js" type="module"></script>
+</body>
+
+</html>

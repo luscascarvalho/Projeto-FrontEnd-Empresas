@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UserPage Kenzie Empresas</title> 
+</head>
+
+<link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+<link rel="stylesheet" href="/src/styles/globalStyles.css">
+<link rel="stylesheet" href="/src/styles/userpage.css">
+
+<body>
+    <section>
+        <img src="/assets/Group 42.svg" alt="Logo Kenzie Empresas">
+        <nav>
+            <button id="home" class="btn1">Logout</button>
+        </nav>
+    </section>
+
+    <dialog id="editUser" class="modalEdit">
+        <div class="h1-btn-ModalEdit">
+            <h1>Editar Perfil</h1>
+            <button id="closeEditUser">X</button>
+        </div>
+        <div class="inputsModalEdit">
+            <input type="text" name="name" id="username" placeholder="Seu nome">
+            <input type="text" name="mail" id="mailUser" placeholder="Seu email">
+            <input type="password" name="password" id="passwordUser" placeholder="Sua senha">
+            <button id="saveEditChanges">Editar Perfil</button>
+        </div>
+    </dialog>
+
+    <section class="myUser">
+        <!-- <h1>USERNAME</h1>
+        <div class="infoMyUser">
+            <span>email@mail.com</span>
+            <span>NivProf</span>
+            <span>ModalidadeTrabalho</span>
+            <button>Lápis</button>
+        </div> -->
+    </section>
+
+
+    <main>
+        <div id="alertUmp" class="depDivName">
+            <h1 class="dep-name"></h1>
+        </div>
+        
+        <div class="alert">
+            <!-- <H1>VOCÊ AINDA NÃO FOI CONTRATADOOOOOOOOOOOOOOOOOOOOOOOOO</H1> -->
+            <section class="companyWorkers">
+                <div>
+    
+                    <ul>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+
+    </main>
+    <script src="/src/scripts/userpage.js" type="module"></script>
+</body>
+
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Kenzie Empresas</title>
+</head>
+
+<link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+<link rel="stylesheet" href="/src/styles/globalStyles.css">
+<link rel="stylesheet" href="/src/styles/admin.css">
+
+<body>
+    <section>
+        <img src="/assets/Group 42.svg" alt="Logo Kenzie Empresas">
+        <nav>
+            <button id="home" class="btn1">Logout</button>
+        </nav>
+    </section>
+
+    <main>
+        <dialog id="infoModal">
+            <div class="myCompany">
+                <h1>Nome do departamento</h1>
+                <button id="closeDialog">X</button>
+                <span>Descrição do departamento</span>
+                <span>Empresa pertencente</span>
+                <button>Contratar</button>
+                <select name="" id="selectInfoModal">
+                </select>
+                <button id="contract">Contratar</button>
+            </div>
+
+
+            <ul class="ul-dialog">
+                <li class="li-dialog">
+                    <h3>Username</h3>
+                    <span>Nivel Prof</span>
+                    <span>Company Name</span>
+
+                    <button>Desligar</button>
+                </li>
+            </ul>
+        </dialog>
+
+        <dialog id="deleteModal" class="deleteModal">
+            <div class="deleteThisDep">
+                <button id="closeModalDelete" class="closeThisModal">X</button>
+                <h1>Realmente deseja deletar o departamento e demitir seus funcionários?</h1>
+                <button id="deleteDep" class="sureDelete">Confirmar</button>
+            </div>
+        </dialog>
+
+        <dialog id="editModal" class="editModal">
+            <div class="mainEditModal">
+                <h1>Editar Departamento</h1>
+                <button id="closeModalEdit">X</button>
+            </div>
+            <div class="textAreaModal">
+                <textarea name="description" cols="30" rows="10" id="textEdit"
+                    placeholder="Valores anteriores da descrição"></textarea>
+                <button id="saveChanges">Salvar alterações</button>
+            </div>
+        </dialog>
+
+        <dialog id="createModal" class="createDep">
+            <div class="createdDep">
+                <h1>Criar departamento</h1>
+                <button id="cancelCreate">X</button>
+            </div>
+            <div class="btn-input-CreateDep">
+                <input type="text" name="name" id="nameDep" placeholder="Nome do departamento">
+                <input type="text" name="description" id="descDep" placeholder="Descrição">
+                <select name="company_uuid" id="selectComp"></select>
+                <button id="saveCreateDep">Criar departamento</button>
+            </div>
+        </dialog>
+
+        <dialog id="deleteUserModal" class="dialogDeleteModal">
+            <div class="divDeleteModal">
+                <h1>Realmente deseja remover o usuário?</h1>
+                <button id="closeDeleteUserModal">X</button>
+            </div>
+            <button id="deleteThisUser" class="yesDelete">Deletar</button>
+        </dialog>
+
+        <dialog id="editUserModal" class="editModalUser">
+            <div class="divEditUser1">
+                <h1>Editar usuário</h1>
+                <button id="closeEditModal">X</button>
+            </div>
+
+            <div class="divEditsModal">
+                <select name="optionWork" id="optionWork">
+                    <option value="presencial">Presencial</option>
+                    <option value="home office">Home Office</option>
+                    <option value="hibrido">Híbrido</option>
+                </select>
+
+                <select name="nivprof" id="nivprof">
+                    <option value="júnior">Júnior</option>
+                    <option value="pleno">Pleno</option>
+                    <option value="sênior">Sênior</option>
+                </select>
+
+                <button id="saveEdit">Editar</button>
+            </div>
+        </dialog>
+
+        <div class="container">
+
+            <div class="box-company">
+                <h1>Departamentos</h1>
+                <select name="companys" id="companys">
+                    <option value="0">Selecionar empresas</option>
+                </select>
+                <button id="btnCreate" class="btnCreate">+ Criar</button>
+            </div>
+
+            <ul class="cards">
+                <!-- <li>
+                    <h3>Department Name</h3>
+                    <span>Department Description</span>
+                    <span>Company Name</span>
+                    <div class="li-btn">
+                        <button>Olho</button>
+                        <button>Lápis</button>
+                        <button>Lixo</button>
+                    </div>
+
+
+                    <hr>
+                </li> -->
+            </ul>
+
+            <h1 class="text-user">Usuários cadastrados</h1>
+
+            <ul class="user-cards">
+                <!-- <li class="li-users">
+                    <h3>Username</h3>
+                    <span>Nivel Prof</span>
+                    <span>Nome da empresa</span>
+                    <div class="li-btn">
+                        <button>Olho</button>
+                        <button>Lápis</button>
+                        <button>Lixo</button>
+                    </div>
+
+                    <hr>
+                </li> -->
+            </ul>
+        </div>
+    </main>
+
+    <script src="/src/scripts/admin.js" type="module"></script>
+</body>
+
+</html>
